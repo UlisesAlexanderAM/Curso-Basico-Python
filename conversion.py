@@ -10,6 +10,7 @@ def main():
     Elige una de las siguiente opciones:
     1- Pesos Mexicano a Dólares Estadounidenses (MXN/USD)
     2- Dólares Estadounidenses a Pesos Mexicanos (USD/MXN)
+
     """
     opcion = input(menu)
     if opcion == "1":
@@ -18,8 +19,10 @@ def main():
         print("Los pesos mexicanos que tienes equivalen a $" + dolares + " USD")
     elif opcion == "2":
         usd = float(input("¿Cuántos dólares estadounidenses(USD) tienes?: "))
-        mxn = conversor(0.4, usd)
+        mxn = conversor(0.04, usd)
         print("Los dólares estadounidenses que tienes equivalen a $" + mxn + " MXN")
+    else:
+        print("Opcion incorrecta")
 
 
 if __name__ == "__main__":
