@@ -8,8 +8,8 @@ def main():
     menu = """
     Bienvenido, este es un conversor de monedas.
     Elige una de las siguiente opciones:
-    1- Pesos Mexicano a Dolares Estadounidenses (MXN/USD)
-    2- Dolares Estadounidenses a Pesos Mexicanos (USD/MXN)
+    1- Pesos Mexicano a Dólares Estadounidenses (MXN/USD)
+    2- Dólares Estadounidenses a Pesos Mexicanos (USD/MXN)
     """
     opcion = input(menu)
     if opcion == "1":
