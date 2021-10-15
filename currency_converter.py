@@ -1,7 +1,7 @@
-def conversor(razon_de_cambio, monto):
-    monto = monto / razon_de_cambio
-    monto = str(round(monto, 2))
-    return monto
+def converter(exchange_rate, amount):
+    amount = amount / exchange_rate
+    amount = str(round(amount, 2))
+    return amount
 
 
 def main():
@@ -12,17 +12,19 @@ def main():
     2- Dólares Estadounidenses a Pesos Mexicanos (USD/MXN)
 
     """
-    opcion = input(menu)
-    if opcion == "1":
-        pesos_mexicanos = float(input("¿Cuántos pesos mexicanos(MXN) tienes?: "))
-        dolares = conversor(20.75, pesos_mexicanos)
+
+    option = input(menu)
+
+    if option == "1":
+        mexican_pesos = float(input("¿Cuántos pesos mexicanos(MXN) tienes?: "))
+        dolares = converter(20.75, mexican_pesos)
         print("Los pesos mexicanos que tienes equivalen a $" + dolares + " USD")
-    elif opcion == "2":
+    elif option == "2":
         usd = float(input("¿Cuántos dólares estadounidenses(USD) tienes?: "))
-        mxn = conversor(0.04, usd)
+        mxn = converter(0.04, usd)
         print("Los dólares estadounidenses que tienes equivalen a $" + mxn + " MXN")
     else:
-        print("Opcion incorrecta")
+        print("Opción incorrecta")
 
 
 if __name__ == "__main__":
