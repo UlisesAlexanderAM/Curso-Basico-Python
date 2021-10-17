@@ -1,7 +1,7 @@
 import random
 
 
-def characters():
+def characters_list():
     MAYUS = [
         "A",
         "B",
@@ -93,15 +93,18 @@ def characters():
     return characters
 
 
-def main():
-    chars = characters()
+def generate_password(chars):
     password = []
-
     for i in range(15):
         random_char = random.choice(chars)
         password.append(random_char)
-
     password = "".join(password)
+    return password
+
+
+def main():
+    chars = characters_list()
+    password = generate_password(chars)
     print(password)
 
 
