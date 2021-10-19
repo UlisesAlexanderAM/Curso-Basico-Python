@@ -2,6 +2,11 @@ import random
 
 
 def characters_list():
+    """Create a list of character from 4 separates list (MAYUS,MINUS,NUMS,CHARS).
+
+    returns a list o characters
+    """
+
     MAYUS = [
         "A",
         "B",
@@ -94,6 +99,12 @@ def characters_list():
 
 
 def generate_password(chars):
+    """Generates a random password.
+
+    param list(str) chars
+    returns a random password
+    """
+
     password = []
     for i in range(15):
         random_char = random.choice(chars)
