@@ -1,13 +1,16 @@
-def converter(exchange_rate, amount):
+def converter(exchange_rate: float, amount: float) -> str:
     """Converts a currency to another currency
 
     param float exchange_rate the exchange rate between currencies
     param float amount the amount of money to convert
     returns the amount of money in the currency to convert
     """
-    amount = amount / exchange_rate
-    amount = str(round(amount, 2))
-    return amount
+    try:
+        amount = amount / exchange_rate
+        amount_string = str(round(amount, 2))
+        return amount_string
+    except ZeroDivisionError as e:
+        return f"{e}. \nEl tipo de cambio {exchange_rate} es cero. Tipo de cambio invalido."
 
 
 def main():
